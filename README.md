@@ -1,131 +1,153 @@
-# Super Smash Bros 2D (Python Game)
+# Python Smash
 
-This is a **2D fighting game** inspired by Super Smash Bros, built using **Python** and **Pygame**. In this game, players battle on platforms, attack each other, and try to knock their opponent off the map.
+Python Smash is a 2D platform fighting game I made in Python using Pygame. It's inspired by platform fighters like Super Smash Bros., with percentage-based knockback, multiple stages, unique characters, AI opponents, and local multiplayer.
 
-I made this project to practice coding, game design, and problem-solving.
+I started this project to see how much of a fighting game I could build from scratch in Python while learning more about physics, game loops, AI, and combat systems.
 
 ## Features
 
-* **Fighting System**
+### Game Modes
 
-  * Basic attacks
-  * Special attacks
-  * Blocking/shielding
+* VS AI
+* Local 2-Player (same keyboard)
 
-* **Damage Counter**
+### Difficulty Levels
 
-  * Every hit increases damage
-  * Higher damage means stronger knockback
+* Easy
+* Medium
+* Hard
 
-* **2 Players**
+The AI gets faster, more aggressive, and better at defending itself as the difficulty increases.
 
-  * Play against a friend on one keyboard
+## Fighters
 
-* **Simple AI Opponent**
+Every character has an ability and a drawback.
 
-  * Battle against the computer
+### Blaze
 
-* **Platform Arena**
+* +30% movement speed
+* Takes extra knockback
 
-  * Jump on platforms
-  * Avoid getting knocked out
+### Titan
 
----
+* Harder to launch
+* Slower movement and lower jumps
 
+### Volt
 
-## Built With
+* Special attacks recharge twice as fast
+* Weaker basic attacks
 
-* Python
-* Pygame
+### Ace
 
----
+* One extra air jump
+* Lower shield health
 
-## Files
+### Hook
 
-```bash
-Super-Smash-Bros_2DPython/
-│── assets/         # Images and sounds
-│── main.py         # Main game file
-│── player.py       # Player code
-│── enemy.py        # AI enemy code
-│── physics.py      # Movement and gravity
-│── combat.py       # Attack system
-│── README.md
-```
+* Longer grab range
+* Slower shield regeneration
 
----
+### Nova
+
+* Rage builds faster, increasing knockback at high percentages
+* Longer special cooldowns
+
+## Stages
+
+### Battlefield
+
+Three-platform stage inspired by classic platform fighters.
+
+### Final Stage
+
+A simple flat stage.
+
+### Sky Arena
+
+Features a moving platform that changes positioning during the match.
+
+## Combat Mechanics
+
+* Percentage-based damage and knockback
+* Basic attacks
+* Projectile specials
+* Grabs
+* Shields
+* Spot dodges
+* Air jumps
+* Fast falling
+* Ledge grabbing
+* Rage mechanic
+* Hit pause
+* Screen shake
+* Combo tracking and end-of-game statistics
 
 ## Controls
 
 ### Player 1
 
-* A = Move Left
-* D = Move Right
-* W = Jump
-* F = Attack
-* G = Special Attack
-* S = Shield
+* A/D – Move
+* W – Jump
+* S – Fast Fall
+* J – Attack
+* K – Special
+* L – Shield
+* I – Grab
 
 ### Player 2
 
-* ← = Move Left
-* → = Move Right
-* ↑ = Jump
-* K = Attack
-* L = Special Attack
-* ↓ = Shield
+* ←/→ – Move
+* ↑ – Jump
+* ↓ – Fast Fall
+* . – Attack
+* / – Special
+* Right Shift – Shield
+* Right Ctrl – Grab
 
----
+## Installation
 
-## How to Run
-
-Clone the project:
-
-```bash
-git clone https://github.com/TheCuriousBuilder/Super-Smash-Bros_2DPython.git
-cd Super-Smash-Bros_2DPython
-```
-
-Install Pygame:
+Install the required libraries:
 
 ```bash
-pip install pygame
+pip install pygame numpy
 ```
 
-Start the game:
+NumPy is optional. The game still runs without it, but sound effects will be disabled.
+
+## Running the Game
 
 ```bash
-python main.py
+python PythonSmash.py
 ```
-
----
 
 ## What I Learned
 
-This project helped me learn:
+This project taught me a lot about:
 
-* How to build a game in Python
-* How collisions work
-* How gravity and jumping work
-* How to make enemies move and attack
-* How to organize code into different files
+* Object-oriented programming
+* Physics and collision detection
+* AI behavior
+* Particle effects and screen shake
+* Game balancing
+* Building larger projects in Pygame
 
----
+The hardest parts were getting knockback to feel right, handling platform collisions, and making the AI recover consistently.
 
 ## Future Ideas
 
-Things I want to add:
-
-* More characters
-* More maps
+* More fighters with unique movesets
+* Stage hazards
+* More attacks and combo options
 * Better AI
-* Health bars
-* Power-ups
-* Character select screen
+* Additional stages
+* Music and more sound effects
+* Online multiplayer
 
----
+## Built With
 
-## Why I Made This
+* Python
+* Pygame
+* NumPy (optional)
 
-I wanted to challenge myself by creating a fighting game with movement, attacks, and game physics. This project helped me improve my coding skills and understand how games work.
-
+Made by **TheCuriousBuilder** as a personal project and a way to learn game development by building a platform fighter completely from scratch.
